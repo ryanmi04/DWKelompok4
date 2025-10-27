@@ -1,10 +1,10 @@
 {
   "grafana": {
     "datasource_type": "Microsoft SQL Server",
-    "host": "sqlserver:1433",
+    "host": "localhost:1433",
     "database": "PTXYZ_DataWarehouse",
     "user": "sa",
-    "password": "PTXYZDataWarehouse2025",
+    "password": "NewPassw0rd!23",
     "ssl_mode": "disable"
   },
   "superset": {

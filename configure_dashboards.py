@@ -147,10 +147,10 @@ def create_connection_guide():
     connection_guide = {
         "grafana": {
             "datasource_type": "Microsoft SQL Server",
-            "host": "sqlserver:1433",
+            "host": "localhost:1433",
             "database": "PTXYZ_DataWarehouse", 
             "user": "sa",
-            "password": "PTXYZDataWarehouse2025",
+            "password": "NewPassw0rd!23",
             "ssl_mode": "disable"
         },
         "superset": {
@@ -169,7 +169,7 @@ def create_connection_guide():
     }
     
     # Save connection guide
-    with open('/home/egistr/Documents/kuliah/semester6/dw/DW_Project_Kelompok22/DASHBOARD_CONNECTION_GUIDE.json', 'w') as f:
+    with open('/Users/Ryan muhammad irfan/Documents/SEMESTER 7/BI/Perancangan-Data-Warehouse-Industri-Pertambangan-PT.XYZ/dashboard/DASHBOARD_CONNECTION_GUIDE.json', 'w') as f:
         json.dump(connection_guide, f, indent=2)
     
     logger.info("📝 Connection guide saved to DASHBOARD_CONNECTION_GUIDE.json")
@@ -276,7 +276,7 @@ WHERE dt.date >= DATEADD(day, -7, GETDATE())
     }
     
     # Save SQL queries reference
-    with open('/home/egistr/Documents/kuliah/semester6/dw/DW_Project_Kelompok22/DASHBOARD_SQL_QUERIES.json', 'w') as f:
+    with open('/Users/Ryan muhammad irfan/Documents/SEMESTER 7/BI/Perancangan-Data-Warehouse-Industri-Pertambangan-PT.XYZ/dashboard/DASHBOARD_SQL_QUERIES.json', 'w') as f:
         json.dump(sql_queries, f, indent=2)
     
     logger.info("📝 SQL queries reference saved to DASHBOARD_SQL_QUERIES.json")

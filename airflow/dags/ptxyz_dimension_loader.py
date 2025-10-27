@@ -27,18 +27,21 @@ dag = DAG(
 )
 
 def get_sql_connection():
-    """Get SQL Server connection"""
-    # Get password from environment variable
-    sql_password = os.getenv('MSSQL_SA_PASSWORD', 'PTXYZSecure123!')
+    sql_host = os.getenv('MSSQL_HOST')
+    sql_port = int(os.getenv('MSSQL_PORT'))
+    sql_user = os.getenv('MSSQL_USER')
+    sql_password = os.getenv('MSSQL_SA_PASSWORD')
+    sql_db = os.getenv('MSSQL_DB')
     
     return pymssql.connect(
-        server='ptxyz_sqlserver',
-        port=1433,
-        database='PTXYZ_DataWarehouse',
-        user='sa',
+        server=sql_host,
+        port=sql_port,
+        database=sql_db,
+        user=sql_user,
         password=sql_password,
         timeout=30
     )
+
 
 def load_staging_data():
     """Load CSV data into staging tables"""
