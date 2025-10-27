@@ -150,8 +150,8 @@ def get_sql_connection():
 #### 4)	5)	membuat test_connection.py (untuk mengetest koneksi sql dari airflow ptxyz_fact_loader.py dan ptxyz_dimension_loader.py)
 #### 5)	6)	membuat validate.sql 
 untuk membuktikan kepatuhan pada README:
-•	Skema: nama tabel/kolom/tipe sesuai README.
-•	Integritas: semua baris fakta punya FK yang valid; 0 orphan.
-•	Agregat: jika README menampilkan contoh hasil (angka total/rekap), hasil Anda harus sama.
+- Skema: nama tabel/kolom/tipe sesuai README.
+- Integritas: semua baris fakta punya FK yang valid; 0 orphan.
+- Agregat: jika README menampilkan contoh hasil (angka total/rekap), hasil Anda harus sama.
 
 
