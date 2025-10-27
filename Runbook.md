@@ -16,8 +16,8 @@ cd DW_Project_Kelompok22
 ```cp .env.example .env```
 
 ### 2.	Mengatur .env berisi variabel (DB user, password, host, port, nama DB) agar hard-code kredensial.
-        1) .env
-           ```ACCEPT_EULA=Y
+ ####1) .env
+        ```ACCEPT_EULA=Y
            MSSQL_PID=Developer
            MSSQL_SA_PASSWORD=DWKelompok_4!
            MSSQL_USER=sa
