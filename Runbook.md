@@ -16,14 +16,19 @@ cd DW_Project_Kelompok22
 ```cp .env.example .env```
 
 ### 2.	Mengatur .env berisi variabel (DB user, password, host, port, nama DB) agar hard-code kredensial.
-*.env
- ```ACCEPT_EULA=Y
+#### 1) 
+
+```
+ACCEPT_EULA=Y
  MSSQL_PID=Developer
  MSSQL_SA_PASSWORD=DWKelompok_4!
  MSSQL_USER=sa
  MSSQL_HOST=sqlserver
  MSSQL_PORT=1433
- MSSQL_DB=PTXYZ_DataWarehouse```
+ MSSQL_DB=PTXYZ_DataWarehouse
+```
+
+
 
 ### 3. Menjalankan Layanan dengan Docker
 #### Menjalankan semua layanan:
