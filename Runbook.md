@@ -7,13 +7,17 @@
 
 ## Langkah-Langkah
 
-### 1. Clone Repository
+### 1. Clone dari Github dan Menambahkan env
 ```bash
 git clone <repository-url>
 cd DW_Project_Kelompok22
 ```
 
-### 2. Setting Docker
+```cp .env.example .env```
+
+### 2.	Mengatur .env berisi variabel (DB user, password, host, port, nama DB) agar hard-code kredensial.
+#### 1) .env
+        
 
 ### 3. Menjalankan Layanan dengan Docker
 #### Menjalankan semua layanan:
