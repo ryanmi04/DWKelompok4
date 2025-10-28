@@ -1,4 +1,4 @@
-# A.Arsitektur Sederhana
+<img width="1687" height="460" alt="Screenshot 2025-10-27 213639" src="https://github.com/user-attachments/assets/a89213a3-5527-4a11-be7b-37ac861908ca" /><img width="1903" height="362" alt="compose up 1" src="https://github.com/user-attachments/assets/76815d20-4225-43b7-bc1f-56f1d9aba81b" /># A.Arsitektur Sederhana
 
 ## Alur Sistem
 **Sumber data → Pipeline ETL/ELT (Airflow) → Data Warehouse (SQL Server) → Visualisasi / Analitik (Grafana / Superset / Metabase / Jupyter)**
@@ -8,10 +8,12 @@
 ## B.Langkah-Langkah
 
 ### 1. Clone dari Github dan Menambahkan env
+<img width="960" height="169" alt="git clone" src="https://github.com/user-attachments/assets/078ea9d8-6053-4bd0-85a6-c38fd09ec385" />
 ```bash
 git clone <repository-url>
 cd DW_Project_Kelompok22
 ```
+
 
 ```cp .env.example .env```
 
@@ -145,9 +147,16 @@ def get_sql_connection():
 
 ### 3.	Menjalankan perintah sesuai readme
 #### 1)	docker-compose up -d (memulai semua service)
-https://github.com/ryanmi04/DWKelompok4/blob/main/screenshots/compose%20ps.png
+<img width="1903" height="362" alt="compose up 1" src="https://github.com/user-attachments/assets/e4833b25-7f05-42b9-adbe-ff5857b83f0f" />
+<img width="513" height="334" alt="compose up 2" src="https://github.com/user-attachments/assets/d4443a92-30f0-4a38-8048-551d43ebb5cc" />
+
 #### 2)	docker compose ps (check status)
+<img width="1841" height="787" alt="compose ps" src="https://github.com/user-attachments/assets/fb51af63-d66d-49dd-8098-13238c2eb87e" />
+
 #### 3)	python standalone_etl.py (menjalankan ETL)
+<img width="1580" height="27" alt="etl 1" src="https://github.com/user-attachments/assets/b947810b-5ee8-4670-a470-a7f57fd4e059" />
+<img width="1263" height="674" alt="etl" src="https://github.com/user-attachments/assets/fb8d2be9-e996-489b-8e88-328ee6cf497a" />
+
 #### 4)	membuat test_connection.py (untuk mengetest koneksi sql dari airflow ptxyz_fact_loader.py dan ptxyz_dimension_loader.py)
 ```
 from dotenv import load_dotenv
@@ -340,33 +349,48 @@ untuk membuktikan kepatuhan pada README:
 ## C.Bukti/Hasil
 ### 1. Hasil Validate
 #### 1) Skema: nama tabel/kolom/tipe sesuai README
+<img width="564" height="400" alt="kepatuhan skema" src="https://github.com/user-attachments/assets/82ade308-fe9f-4177-b885-503bcd715993" />
+
 #### 2)	Integritas: semua baris fakta punya FK yang valid; 0 orphan.
+<img width="886" height="397" alt="integritas fk" src="https://github.com/user-attachments/assets/6d53dd49-86ce-4c79-81f0-2e439390e10b" />
+
 #### 3)	Agregat: jika README menampilkan contoh hasil (angka total/rekap), hasil Anda harus sama.
+<img width="695" height="371" alt="jumlah record" src="https://github.com/user-attachments/assets/7707db71-014e-4e76-a5a8-679197af29cd" />
 
 ### 2. Hasil test_connection.py
+<img width="1834" height="61" alt="test koneksi" src="https://github.com/user-attachments/assets/737d3903-f651-48e7-ba8a-390a21c21649" />
 
 
 ## D.Kendala dan Solusi
 ### 1. Folder plugins tidak ditemukan
 Kendala:
+<img width="1687" height="460" alt="Screenshot 2025-10-27 213639" src="https://github.com/user-attachments/assets/1164ef23-7253-40ba-860f-95dc3cffed3b" />
 
 Solusi:
 Membuat folder plugin didalam folder airflow
+<img width="1246" height="202" alt="Screenshot 2025-10-27 214123" src="https://github.com/user-attachments/assets/10f5b1d7-74ce-4d7d-a653-ce391126804c" />
 
 
 ### 2.	Error unicodeencoding
 Kendala:
 Windows default-nya pakai encoding cp1252 (bukan UTF-8).
 Encoding ini tidak mendukung emoji atau beberapa simbol Unicode, seperti 🚀, ✅, 🔄, 📊, 🎉, dll.
- 
+<img width="841" height="48" alt="error encoding" src="https://github.com/user-attachments/assets/a4bc3d7b-5813-437a-a2ac-b0fcda1c11a0" />
 
 Solusi:
 Masukan $env:PYTHONUTF8 = "1 pada terminal
-
+<img width="1600" height="83" alt="error encoding 2" src="https://github.com/user-attachments/assets/fa86b385-050e-4e7d-b719-2eb7a6d9d11a" />
 
 ### 3.	Login Failed
 Kendala:
 Database tidak dibuat otomatis saat docker compose up -d
+<img width="511" height="481" alt="error sa1" src="https://github.com/user-attachments/assets/e4d3b616-586c-4954-b24b-8728c865b0e0" />
+<img width="1614" height="53" alt="error sa 2" src="https://github.com/user-attachments/assets/1fc5aae9-4740-49c4-9e45-5a47429e7449" />
+
+Solusi:
+ubah init-db.sh dari CRLF menjadi LF
+<img width="756" height="116" alt="error sa3" src="https://github.com/user-attachments/assets/8c854771-06c9-45c0-8b98-09880ae1098a" />
+
  
  
 
