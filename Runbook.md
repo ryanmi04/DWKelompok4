@@ -145,6 +145,7 @@ def get_sql_connection():
 
 ### 3.	Menjalankan perintah sesuai readme
 #### 1)	docker-compose up -d (memulai semua service)
+https://github.com/ryanmi04/DWKelompok4/blob/main/screenshots/compose%20ps.png
 #### 2)	docker compose ps (check status)
 #### 3)	python standalone_etl.py (menjalankan ETL)
 #### 4)	membuat test_connection.py (untuk mengetest koneksi sql dari airflow ptxyz_fact_loader.py dan ptxyz_dimension_loader.py)
