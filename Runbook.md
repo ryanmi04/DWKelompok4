@@ -390,6 +390,7 @@ Kendala:
 Database tidak dibuat otomatis saat docker compose up -d
  
 Solusi:
+
 Mengubah file init-db.sh dari CRLF menjadi LF agar database dabat dibuat bersamaan dengan docker compose up -d
 <img width="756" height="116" alt="error sa3" src="https://github.com/user-attachments/assets/8c854771-06c9-45c0-8b98-09880ae1098a" />
 
