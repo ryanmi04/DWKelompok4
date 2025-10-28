@@ -385,15 +385,11 @@ Masukan $env:PYTHONUTF8 = "1 pada terminal
 Kendala:
 <img width="511" height="481" alt="error sa1" src="https://github.com/user-attachments/assets/e4d3b616-586c-4954-b24b-8728c865b0e0" />
 <img width="1614" height="53" alt="error sa 2" src="https://github.com/user-attachments/assets/1fc5aae9-4740-49c4-9e45-5a47429e7449" />
+
 Database tidak dibuat otomatis saat docker compose up -d
-
-Solusi:
-ubah init-db.sh dari CRLF menjadi LF
-<img width="756" height="116" alt="error sa3" src="https://github.com/user-attachments/assets/8c854771-06c9-45c0-8b98-09880ae1098a" />
-
  
- 
-
 Solusi:
 Mengubah file init-db.sh dari CRLF menjadi LF agar database dabat dibuat bersamaan dengan docker compose up -d
+<img width="756" height="116" alt="error sa3" src="https://github.com/user-attachments/assets/8c854771-06c9-45c0-8b98-09880ae1098a" />
+
 
