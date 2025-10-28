@@ -1,4 +1,4 @@
-<img width="1687" height="460" alt="Screenshot 2025-10-27 213639" src="https://github.com/user-attachments/assets/a89213a3-5527-4a11-be7b-37ac861908ca" /><img width="1903" height="362" alt="compose up 1" src="https://github.com/user-attachments/assets/76815d20-4225-43b7-bc1f-56f1d9aba81b" /># A.Arsitektur Sederhana
+# A.Arsitektur Sederhana
 
 ## Alur Sistem
 **Sumber data → Pipeline ETL/ELT (Airflow) → Data Warehouse (SQL Server) → Visualisasi / Analitik (Grafana / Superset / Metabase / Jupyter)**
